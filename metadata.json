@@ -1,0 +1,5 @@
+{
+  "name": "Med Hub",
+  "description": "A simple application to track medication stock-in and stock-out, flag low supply items, and visualize monthly consumption trends.",
+  "requestFramePermissions": []
+}

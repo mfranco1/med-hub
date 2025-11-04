@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Med Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))',
+              },
+              secondary: {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))',
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))',
+              },
+              warning: {
+                DEFAULT: 'hsl(var(--warning))',
+                foreground: 'hsl(var(--warning-foreground))',
+              },
+              success: {
+                DEFAULT: 'hsl(var(--success))',
+                foreground: 'hsl(var(--success-foreground))',
+              },
+              muted: {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))',
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))',
+              },
+              popover: {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))',
+              },
+              card: {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))',
+              },
+            },
+            borderRadius: {
+              lg: `var(--radius)`,
+              md: `calc(var(--radius) - 2px)`,
+              sm: 'calc(var(--radius) - 4px)',
+            },
+            keyframes: {
+              'fade-in-right': {
+                '0%': { opacity: '0', transform: 'translateX(20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+            },
+            animation: {
+              'fade-in-right': 'fade-in-right 0.3s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        --radius: 0.5rem;
+      }
+      .light {
+        --background: 210 40% 98%; /* slate-50 */
+        --foreground: 222.2 84% 4.9%; /* slate-950 */
+        --card: 0 0% 100%; /* white */
+        --card-foreground: 222.2 84% 4.9%; /* slate-950 */
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 221.2 70% 50%; /* Muted Blue */
+        --primary-foreground: 210 40% 98%; /* slate-50 */
+        --secondary: 210 40% 96.1%; /* slate-100 */
+        --secondary-foreground: 222.2 47.4% 11.2%; /* slate-900 */
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%; /* slate-500 */
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+        --destructive: 0 90% 55%;
+        --destructive-foreground: 210 40% 98%;
+        --warning: 38 91.6% 56.5%;
+        --warning-foreground: 210 40% 98%;
+        --success: 142.1 76.2% 36.3%;
+        --success-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%; /* slate-200 */
+        --input: 214.3 31.8% 91.4%;
+        --ring: 221.2 70% 50%;
+      }
+      .dark {
+        --background: 0 0% 0%; /* black */
+        --foreground: 210 40% 98%; /* slate-50 */
+        --card: 217.2 32.6% 17.5%; /* slate-800 */
+        --card-foreground: 210 40% 98%; /* slate-50 */
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 217.2 80% 65%; /* Muted Blue */
+        --primary-foreground: 222.2 47.4% 11.2%; /* slate-900 */
+        --secondary: 217.2 32.6% 17.5%; /* slate-800 */
+        --secondary-foreground: 210 40% 98%; /* slate-50 */
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%; /* slate-400 */
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 80% 55%;
+        --destructive-foreground: 210 40% 98%;
+        --warning: 48 96% 50%;
+        --warning-foreground: 210 40% 98%;
+        --success: 142.1 76.2% 36.3%;
+        --success-foreground: 210 40% 98%;
+        --border: 217.2 32.6% 25.5%; /* slate-700 */
+        --input: 217.2 32.6% 17.5%;
+        --ring: 217.2 80% 65%;
+      }
+    </style>
+</head>
+<body class="bg-background text-foreground">
+    <div id="root"></div>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.552.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^9.0.1",
+    "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.0"
+  }
+}
+</script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
